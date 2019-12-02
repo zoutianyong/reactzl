@@ -44,3 +44,8 @@ export const Detail = Loadable({
     loader:_=>import("./detail"),
     loading:Loading
 })
+
+export const Search =Loadable({
+    loader:_=>import("./search"),
+    loading:Loading
+})

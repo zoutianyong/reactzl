@@ -6,6 +6,7 @@ import {
     Login,
     Type,
     Detail,
+    Search
 } from "pages"
 // import Detail from "../pages/detail";
 
@@ -68,6 +69,11 @@ export const NoTabBarRoute = [
     {
         path:"/detail/:id",
         component:Detail,
+        meta:{}
+    },
+    {
+        path:"/search",
+        component:Search,
         meta:{}
     }
 ];
