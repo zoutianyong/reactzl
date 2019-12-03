@@ -10,10 +10,10 @@ background: #eee;height: 100%;overflow-y:auto ;
     font-size: 30px;color:#999;background: #fff;margin-top: .2rem;
     i{font-size: 45px;color: #999;}
     }
-    .navbar{height: 1.6rem;display: flex;justify-content: space-around;align-items: center;font-size: 30px;margin-top: 2px;background: #fff;margin-bottom: .3rem;color: #999; 
+    .navbar{height: 1.6rem;display: flex;justify-content: space-around;align-items: center;font-size: 28px;margin-top: 2px;background: #fff;margin-bottom: .3rem;color: #999; 
         i{font-size: 33px;}}
 .listsign{height: 0.9rem;display: flex;align-items: center;justify-content: space-between;padding: 0 .2rem;
-    font-size: 30px;color:#999;background: #fff;margin-top: 2px;}
+    font-size: 25px;color:#999;background: #fff;margin-top: 2px;}
 
     .listsign i{font-size: 45px;color: #999;}
 .center{line-height: 0.9rem;display: flex;align-items: center;span{margin-left: .1rem;}}
