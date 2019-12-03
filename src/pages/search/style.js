@@ -1,9 +1,10 @@
-.search{
-    width:100%;
+import styled from "styled-components"
+
+export const SearchStyle = styled.div`
+width:100%;
     height:100%;
     position: relative;
-}
-.searchList{
+    .searchList{
     position: absolute;
     width:100%;
     height:70%;
@@ -11,57 +12,58 @@
     top:1rem;
     left:0;
     display: none;
-}
-.searchList ul{
+    ul{
     width:100%;
     height:100%;
     background:#fff;
-}
-.searchList ul li{
+    li{
     width:100%;
     height:10%;
     padding:0 30px;
     border-bottom:1px solid #e5e5e5;
     display: flex;
     align-items: center;
+    p{
+        width:100%; 
+        white-space:nowrap; 
+        text-overflow:ellipsis; 
+        overflow:hidden;}
 }
-.searchList ul li p{width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+}
+}
 .searchTop{
     width:100%;
     height:1rem;
     background:#fff;
     position: relative;
-}
-.searchTop .searchLeft{
+    .searchLeft{
     width:1rem;
     height:1rem;
     float:left;
     /* background:green; */
     text-align:center;
     line-height:1rem;
-}
-.searchTop .searchLeft span{
+    span{
     font-size:40px;
 }
-.searchTop .searchCenter{
+}
+.searchCenter{
     float:left;
     width:72%;
     height:0.8rem;
     margin-top:0.1rem;
     background:#f7f7f7;
-   
-}
-.searchTop .searchCenter .searchCenterLeft{
+    .searchCenterLeft{
     width:0.8rem;
     height:0.8rem;
     float:left;
     text-align: center;
     line-height:0.8rem;
-}
-.searchTop .searchCenter .searchCenterLeft span{
+    span{
     font-size:60px;
 }
-.searchTop .searchCenter .searchInput{
+}
+.searchInput{
     width:3.5rem;
     height:0.5rem;
     margin-top:0.15rem;
@@ -70,13 +72,15 @@
     background:#f7f7f7;
     outline: none;
 }
-.searchTop .searchRight{
+}
+.searchRight{
     width:1rem;
     height:1rem;
     float:right;
     text-align:center;
     line-height: 1rem;
     font-size:25px;
+}
 }
 .hotSearch{
     width:100%;
@@ -91,8 +95,7 @@
     width:100%;
     min-height:2rem;
     padding:0 30px;
-}
-.hotList span{
+    span{
     display: block;
     width:31.5%;
     height:0.7rem;
@@ -102,3 +105,5 @@
     text-align: center;
     line-height: 0.7rem;
 }
+}
+`

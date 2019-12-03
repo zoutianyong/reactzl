@@ -97,7 +97,7 @@ export const NameList=styled.div`
         background:#f5f5f5;
         color:blue;
         p{
-            margin-top:6px;
+            margin-top:10px;
         }
     }
     .one{

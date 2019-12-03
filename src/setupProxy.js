@@ -7,4 +7,12 @@ module.exports  = (app)=>{
             "^/ajax":""
         }
     }))
+    
+    app.use("/mianshui",proxy({
+        target:"https://searchinterface.mianshui365.com",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/mianshui":""
+        }
+    }))
 }
