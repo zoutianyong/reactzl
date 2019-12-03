@@ -7,3 +7,39 @@ export const typeApi=(id,depth)=>http.get({
 
     }
 })
+
+export const listApi=()=>http.get({
+    url:"/ajax/api/overseas/index",
+    data:{
+       
+    }
+})
+
+
+export const picApi=(id)=>http.get({
+    url:"/ajax/api/overseas/products/"+id+"?warehouseId=1",
+    data:{
+        
+    }
+})
+
+//loginApi
+
+export const  loginApi=(username,password)=>http.post({
+    url:"/users/login",
+    data:{
+        username,
+        password
+    }
+})
+
+//registerApi
+
+
+export const  registerApi=(username,password)=>http.post({
+    url:"/users/register",
+    data:{
+        username,
+        password
+    }
+})

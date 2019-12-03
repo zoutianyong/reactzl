@@ -49,3 +49,8 @@ export const Search =Loadable({
     loader:_=>import("./search"),
     loading:Loading
 })
+
+export const List =Loadable({
+    loader:_=>import("./list"),
+    loading:Loading
+})

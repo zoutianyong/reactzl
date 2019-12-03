@@ -7,12 +7,15 @@ import reduxThunk from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import type from  "./reducers/type"
-
+import list from "./reducers/list"
+import detail from "./reducers/detail"
 
 
 const reducer = combineReducers({
-    
-    type
+   
+    type,
+    list,
+    detail,
 })
 
 //3、通过createStore来创建仓库  ----->这个仓库必须要传递一个参数  reducers

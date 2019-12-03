@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 import {LoginContent} from "./style"
-export default class Login extends Component {
+
+
+
+import { connect } from "react-redux"
+import { mapStateToProps, mapDispatchToProps } from "./mapstore"
+import { withRouter } from "react-router-dom";
+@withRouter
+@connect(mapStateToProps, mapDispatchToProps)
+
+ class Login extends Component {
     constructor(){
         super()
         this.state={
@@ -20,20 +29,20 @@ export default class Login extends Component {
                     </div>
                     <div className={flag===0?"active":""}>
                         <div className="input">
-                            <input type="text"  placeholder="请输入用户名" /><br/>
-                            <input type="text" placeholder="请输入用密码" />
+                            <input type="text"  placeholder="请输入用户名" ref="username"/><br/>
+                            <input type="text" placeholder="请输入用密码"  ref="password"/>
 
                         <p><span>没有账号？<u>请注册</u></span><span>忘记密码？<u>找回密码</u></span></p>    
-                        <div className="btn">登录</div>
+                        <div className="btn" onClick={this.handleLogin.bind(this)}>登录</div>
                         </div>
                     </div>
                     <div className={flag===1?"active":""}>
                         <div className="input">
-                            <input type="text"  placeholder="请输入用户名" /><br/>
-                            <input type="text" placeholder="请输入用密码" />
+                            <input type="text"  placeholder="请输入用户名" ref="user" /><br/>
+                            <input type="text" placeholder="请输入用密码" ref="pass" />
 
                         <p><span>没有账号？<u>请注册</u></span><span>忘记密码？<u>找回密码</u></span></p>    
-                        <div className="btn">注册</div>
+                        <div className="btn" onClick={this.handleRegister .bind(this)}>注册</div>
                         </div>
                     </div>    
                    
@@ -46,4 +55,22 @@ export default class Login extends Component {
             flag:index
         })
     }
+    handleLogin(){
+        let username=this.refs.username.value
+        let password=this.refs.password.value
+        this.props.sendLogin(username,password)
+        //  
+
+        setTimeout(()=>{
+            this.props.history.push("/mine")
+        },300)
+       
+    }
+    handleRegister(){
+        let username=this.refs.user.value
+        let password=this.refs.pass.value
+        this.props.sendeRegister(username,password)
+    }
 }
+
+export default Login
