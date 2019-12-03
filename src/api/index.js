@@ -43,3 +43,6 @@ export const  registerApi=(username,password)=>http.post({
         password
     }
 })
+export const HomeApi=_=>http.get({
+    url:"/ajax/api/overseas/index",  
+})

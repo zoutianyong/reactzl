@@ -1,6 +1,8 @@
-import {listType,productLIst,picList} from "./actionType"
+import {listType,productLIst,picList,HomeType} from "./actionType"
 import {createAction} from "redux-actions"
-import {typeApi,listApi,picApi,loginApi,registerApi} from "../../api/index"
+import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi} from "../../api/index"
+
+
 
 export const listTypeAction=(id,depth)=>{
     let createListAction=createAction(listType,(data)=>({data:data}))
@@ -44,5 +46,13 @@ export const registerAction=(username,password)=>{
     return async(dispatch)=>{
         let data=await registerApi(username,password)
         console.log(data)
+    }
+}
+export const HomeListAction=()=>{
+    let createHomeListAction=createAction(HomeType,(data)=>({data:data}))
+    return async(dispatch)=>{
+        let data=await HomeApi()
+        //console.log(data)
+        dispatch(createHomeListAction(data))
     }
 }

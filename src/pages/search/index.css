@@ -1,7 +1,31 @@
 .search{
     width:100%;
     height:100%;
+    position: relative;
 }
+.searchList{
+    position: absolute;
+    width:100%;
+    height:70%;
+    background:#fff;
+    top:1rem;
+    left:0;
+    display: none;
+}
+.searchList ul{
+    width:100%;
+    height:100%;
+    background:#fff;
+}
+.searchList ul li{
+    width:100%;
+    height:10%;
+    padding:0 30px;
+    border-bottom:1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+.searchList ul li p{width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .searchTop{
     width:100%;
     height:1rem;
