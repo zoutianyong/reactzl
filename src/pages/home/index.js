@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom"
 import { connect } from "react-redux"
 import { Shouye, Search, Banner, Navs, Line, BigImg, Year, YearList, StarList, AllBuy, AllBuyList, Up } from "./styled"
 import { mapStateToProps, mapDispatchToProps } from "./homeStore"
-import NodeEnvironment from '_jest-environment-node@24.9.0@jest-environment-node'
 @connect(mapStateToProps, mapDispatchToProps)
 @withRouter
 class Home extends Component {
