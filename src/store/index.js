@@ -10,15 +10,20 @@ import type from  "./reducers/type"
 import home from "./reducers/home"
 import search from "./reducers/search"
 import find from "./reducers/find"
-
+import list from "./reducers/list"
+import detail from "./reducers/detail"
 
 const reducer = combineReducers({
     
     type,
     home,
     search,
-    find
+    find,
+    list,
+    detail,
 })
+
+
 
 //3、通过createStore来创建仓库  ----->这个仓库必须要传递一个参数  reducers
 const store = createStore(reducer,composeWithDevTools(applyMiddleware(reduxThunk)));

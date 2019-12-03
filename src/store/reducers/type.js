@@ -1,7 +1,7 @@
 import {handleActions} from "redux-actions";
 import {listType} from "../../actions/type/actionType"
 const defaultState={
-    tyofLIst:[]
+    tyofLIst:[],
 }
 
 export default handleActions({

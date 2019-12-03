@@ -17,8 +17,7 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
     render() {
         let {color}=this.state
         let {tyofLIst}=this.props;
-        console.log(tyofLIst)
-    //    let picurl= tyofLIst[0]
+    
         return (
             <PageContainer>
                     <TypeConinter >
@@ -88,13 +87,12 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
         this.props.handleType()
     }
     handleChange(index){
-        console.log(index)
         this.setState({
             color:index
         })
     }
     handleClick(child){
-        this.props.history.push("/detail/"+child.id)
+        this.props.history.push("/list")
     }
 }
 

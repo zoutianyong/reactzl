@@ -13,16 +13,16 @@ height: 100%;display: flex;flex-direction: column;background: #eee;
 
 .main{overflow-y: auto;padding-bottom: 1rem;
     .product{height:2.8rem;display: flex;align-items: center;padding:0 .3rem ;border-bottom: 1px solid #aaa;background: #fff;
-        img{height: 1.7rem;width: 1.7rem;margin: 0.2rem;}
+        img{height: 1.6rem;width: 1.6rem;margin: 0.2rem;}
         input{width: .35rem;height: .35rem;}
         .info{width: 5rem;font-size: 30px;
-            p:nth-child(1){color: #333;}
-            p{margin-bottom: .1rem;}
+            p:nth-child(1){color: #333;font-size:25px}
+            p{margin-bottom: .05rem;font-size:25px}
             p:nth-child(2) span{color: #c33;font-weight: bolder;}
-            s {color: #999;margin-bottom: .1rem}
+            s {color: #999;margin-bottom: .05rem;font-size:22px}
             button{width: 35px;height: 35px;font-size: 35px;line-height:35px;}
             .btn{display: flex; align-items: center;justify-content: space-between;margin: .1rem 0;
-                input{font-size: 30px;text-align: center;}
+                input{font-size: 30px;text-align: center;width:.5rem}
                 }
             .btn2{display: flex; align-items: center;}
         

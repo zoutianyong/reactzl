@@ -10,4 +10,5 @@ export const mapDispatchToProps=(dispatch)=>({
     changeRender(id,depth){
         dispatch(listTypeAction(id,depth))
     }
+    
 })
