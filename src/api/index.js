@@ -7,3 +7,7 @@ export const typeApi=(id,depth)=>http.get({
 
     }
 })
+
+export const HomeApi=_=>http.get({
+    url:"/ajax/api/overseas/index",  
+})

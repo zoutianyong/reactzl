@@ -15,24 +15,24 @@ export default class Find extends Component {
                 <PinpaiList>
                     <div className="imgList">
                         <div>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/bf18df746d6cf80d3ef3d2716ac9fca8.jpg"/>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/7bcd4fa71ada2216efd67a946ca5d890.jpg"/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/bf18df746d6cf80d3ef3d2716ac9fca8.jpg" alt=""/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/7bcd4fa71ada2216efd67a946ca5d890.jpg" alt=""/>
                         </div>
                         <div>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/0ea7d0b67fb9ab77200e99e898db85a5.jpg"/>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/cecde013b1a2a46fffd58008f4513c02.jpg"/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/0ea7d0b67fb9ab77200e99e898db85a5.jpg" alt=""/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/cecde013b1a2a46fffd58008f4513c02.jpg" alt=""/>
                         </div>
                         <div>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg"/>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg"/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg" alt=""/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg" alt=""/>
                         </div>
                         <div>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg"/>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg"/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg" alt=""/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg" alt=""/>
                         </div>
                         <div>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg"/>
-                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg"/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/4b1b25451757fc7f1e42522860bfbc8a.jpg" alt=""/>
+                        <img src="https://pic.cdfgsanya.com/assets/upload/img/8bdc978069ebd00e586266612cdc6065.jpg" alt=""/>
                         </div>
                     </div>
                     

@@ -8,11 +8,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import type from  "./reducers/type"
 
+import home from "./reducers/home"
 
 
 const reducer = combineReducers({
     
-    type
+    type,
+    home
 })
 
 //3、通过createStore来创建仓库  ----->这个仓库必须要传递一个参数  reducers
