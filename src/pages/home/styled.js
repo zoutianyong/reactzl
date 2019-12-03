@@ -50,7 +50,7 @@ left:0;
 export const Banner =styled.div`
 width:100%;
     height:5.2rem;
-    margin-top:0.8rem;
+    margin-top:0.5rem;
     img{
         width:100%;
         height:100%;
@@ -116,7 +116,7 @@ width:100%;
     height:1rem;
     display: flex;
     align-items: center;
-    margin-top:0.5rem;
+    margin-top:0.3rem;
     .yearLeft{
         width:30%;
         height:0;
@@ -143,7 +143,7 @@ width:100%;
 `
 export const YearList=styled.div`
 width:100%;
-    min-height:4.4rem;
+    min-height:3.8rem;
     background:#e5e5e5;
     border-bottom:10px solid #f5f5f5;
     img{
@@ -152,17 +152,18 @@ width:100%;
     }
     .List_One{
         width:100%;
-        height:4.4rem;
+        /* height:4.4rem; */
         background:#fff;
         overflow-x:auto;
         font-size:20px;
         ul {
             width:auto;
-            height:100%;
+            /* height:100%; */
             overflow-x:auto;
             overflow-y:hidden;
             white-space:nowrap;
             list-style-type:none;
+            padding:15px 0px;
             li{
                 display: inline-block;
                 width:3rem;
@@ -199,7 +200,7 @@ width:100%;
 export const StarList=styled.div`
 width:100%;
 height:4.6rem;
-background:#e5e5e5;
+background:#f5f5f5;
 .starListTop{
     width:100%;
     height:1rem;
@@ -234,7 +235,7 @@ img{
 export const AllBuy=styled.div`
 width:100%;
     height:1rem;
-    background:#e5e5e5;
+    background:#f5f5f5;
     .allBuyLeft{
         width:30%;
         height:0;

@@ -8,6 +8,24 @@ export const typeApi=(id,depth)=>http.get({
     }
 })
 
+export const HomeApi=_=>http.get({
+    url:"/ajax/api/overseas/index",  
+})
+
+export const SearchApi=(q)=>http.get({
+    url:"/mianshui/search/goods/associate",
+    data:{
+        shopId:1000,
+        platformId:1,
+        keyword:q,
+        available:1
+
+    }
+})
+
+export const FindApi=_=>http.get({
+    url:"/ajax/api/overseas/brands",
+})
 export const listApi=()=>http.get({
     url:"/ajax/api/overseas/index",
     data:{
@@ -42,7 +60,4 @@ export const  registerApi=(username,password)=>http.post({
         username,
         password
     }
-})
-export const HomeApi=_=>http.get({
-    url:"/ajax/api/overseas/index",  
 })

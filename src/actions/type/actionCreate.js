@@ -1,6 +1,6 @@
-import {listType,productLIst,picList,HomeType} from "./actionType"
+import {listType,HomeType,SearchType,FindType,productLIst,picList} from "./actionType"
 import {createAction} from "redux-actions"
-import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi} from "../../api/index"
+import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi,SearchApi,FindApi} from "../../api/index"
 
 
 
@@ -14,6 +14,31 @@ export const listTypeAction=(id,depth)=>{
     }
 }
 
+export const HomeListAction=()=>{
+    let createHomeListAction=createAction(HomeType,(data)=>({data:data}))
+    return async(dispatch)=>{
+        let data=await HomeApi()
+        //console.log(data)
+        dispatch(createHomeListAction(data))
+    }
+}
+
+export const SearchListAction=(q)=>{
+    let createSearchListAction=createAction(SearchType,(data)=>({data:data}))
+    return async(dispatch)=>{
+        let data=await SearchApi(q)
+        dispatch(createSearchListAction(data))
+    }
+}
+
+export const FindListAction=()=>{
+    let createFindListAction=createAction(FindType,(data)=>({data:data}))
+    return async(dispatch)=>{
+        let data=await FindApi()
+        //console.log(data)
+        dispatch(createFindListAction(data))
+    }
+}
 export const listProductAction=()=>{
     let createProductAction=createAction(productLIst,(data)=>({data:data}))
     return async(dispatch)=>{
@@ -46,13 +71,5 @@ export const registerAction=(username,password)=>{
     return async(dispatch)=>{
         let data=await registerApi(username,password)
         console.log(data)
-    }
-}
-export const HomeListAction=()=>{
-    let createHomeListAction=createAction(HomeType,(data)=>({data:data}))
-    return async(dispatch)=>{
-        let data=await HomeApi()
-        //console.log(data)
-        dispatch(createHomeListAction(data))
     }
 }

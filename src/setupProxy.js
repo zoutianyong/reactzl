@@ -12,5 +12,12 @@ module.exports  = (app)=>{
         target:"http://39.105.204.151:3000",
         changeOrigin:true
     }))
-   
+    
+    app.use("/mianshui",proxy({
+        target:"https://searchinterface.mianshui365.com",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/mianshui":""
+        }
+    }))
 }
