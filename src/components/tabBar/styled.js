@@ -26,10 +26,10 @@ export const TabBarContainer = styled.div`
         justify-content:center;
         align-items:center;
         i{
-            font-size:.4rem;
+            font-size:.45rem;
         }
         span{
-            font-size:.3rem;
+            font-size:.26rem;
         }
     }
 `

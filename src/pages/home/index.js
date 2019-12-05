@@ -8,7 +8,7 @@ import { mapStateToProps, mapDispatchToProps } from "./homeStore"
 class Home extends Component {
     render() {
         let { homeList } = this.props ? this.props : '';
-        //console.log(homeList.floors)
+        console.log(homeList.floors)
         return (
              <Shouye>
 
@@ -86,13 +86,14 @@ class Home extends Component {
                                     <ul>
                                         {
                                             item.products ? item.products.map((child, index) => (
-                                                <li key={index}>
+                                                <li key={index} onClick={this.handleLiClick.bind(this,child)}>
                                                     <img src={child.pic} key={child.pic} alt="" />
                                                     <p key={child.brand}>{child.brand}</p>
                                                     <p className="over" key={child.name}>{child.name}</p>
-                                                    
-                                                    <p>促销价:￥576.00</p>
-                                                <span className="ls" key={child.salesCount}>立省:￥{child.salesCount}</span>
+                                                   
+                                                 <p>促销价:￥{child.contrastPrice?child.contrastPrice.value:""}</p>
+
+                                                <span className="ls" key={child.salesCount}>立省:￥{child.discountPrice?child.discountPrice.value:"0.00"}</span>
                                                 </li>
                                             )) : ""
                                         }
@@ -125,9 +126,7 @@ class Home extends Component {
                     <div className="allBuyCenter" onClick={this.handleClick.bind(this)}>已到底部</div>
                     <div className="allBuyRight"></div>
                 </AllBuy>
-
-
-                {/* <Up><span className="iconfont">&#xe62c;</span></Up> */}
+                {/* <Up><span className="iconfont" onClick={this.handleClick.bind(this)}>&#xe62c;</span></Up> */}
             </Shouye>
         )
     }
@@ -136,7 +135,12 @@ class Home extends Component {
         this.props.history.push("/search")
     }
     handleClick(){
-        console.log(111);
+        // document.body.scrollTop=0;
+        // console.log(111);
+    }
+    handleLiClick(child){
+        this.props.history.push("/detail/" + child.id + "/" + child.contrastPrice.value + "/" + child.name + "/" + child.pic)
+        //console.log(222);
     }
     componentDidMount() {
         this.props.handleAsyncHome();

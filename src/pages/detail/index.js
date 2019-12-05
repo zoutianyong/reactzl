@@ -15,7 +15,7 @@ class Detail extends React.Component {
         return (
             <DetailContener className="detail">
                 <div className="head">
-                    <span>商品详情</span><span className="goback"><i className="iconfont">&#xe610;</i></span>
+                    <span>商品详情</span><span className="goback" onClick={this.handleBack.bind(this)}><i className="iconfont">&#xe610;</i></span>
                 </div>
                 <div className="pic">
                     <img src={detailList.pics?detailList.pics:'https://pic.cdfgsanya.com/assets/upload/product/ac4e21507bac15cbcf610a1382c39ef9_400x400.jpg'} alt="" />
@@ -73,6 +73,9 @@ class Detail extends React.Component {
     }
     jump() {
         this.props.history.push("/order")
+    }
+    handleBack(){
+        this.props.history.go(-1);
     }
 }
 export default Detail;

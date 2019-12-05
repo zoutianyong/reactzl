@@ -1,6 +1,6 @@
 import {listType,HomeType,SearchType,FindType,productLIst,picList,handleChecks} from "./actionType"
 import {createAction} from "redux-actions"
-import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi,SearchApi,FindApi} from "../../api/index"
+import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi,SearchApi,FindApi,xiugaiImgApi} from "../../api/index"
 
 
 
@@ -61,9 +61,9 @@ export const loginAction=(username,password)=>{
     return async(dispatch)=>{
         let data=await loginApi(username,password)
         console.log(data)
+        localStorage.setItem("user",JSON.stringify(data.data.data))
     }
 }
-////
 
 
 
@@ -78,5 +78,12 @@ export const checkAction=()=>{
     let sumAction=createAction(handleChecks)
     return (dispatch)=>{     
     dispatch(sumAction())
+    }
+}
+
+export const xiugaiImg=(filesImg,id)=>{
+    return async(dispatch)=>{
+        let data=await xiugaiImgApi(filesImg,id)
+        console.log(data)
     }
 }

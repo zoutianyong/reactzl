@@ -20,7 +20,7 @@ height: 100%;display: flex;flex-direction: column;background: #f8f8f8;
             p{margin-bottom: .05rem;font-size:25px}
             p:nth-child(2) span{color: #c33;font-weight: bolder;}
             s {color: #999;margin-bottom: .05rem;font-size:20px;}
-            button{background:#f5f5f5;border:0;width: 50px;height: 35px;font-size: 35px;line-height:35px;}
+            button{outline:none; background:#f5f5f5;border:0;width: 50px;height: 35px;font-size: 35px;line-height:35px;}
             .btn{display: flex;align-items: center;width:90%;justify-content: space-between;margin-top:0.2rem;
                 input{font-size: 30px;text-align: center;width: 50px;height: 35px;}
                 }
