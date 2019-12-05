@@ -16,11 +16,30 @@ flex-direction:column
     .head_input{width:6rem;height:.8rem;margin-left:.3rem}
     input{width:6rem;height:.7rem;margin-top:0.02rem}
     head_input input{font-size: 40px !important;}
-    .head_input{display: flex;align-items: center;font-size: 40px;}
-
+    .head_input{display: flex;align-items: center;font-size: 40px;border:1px solid #333;height: 0.8rem;}
+    height:0.8rem;
+    /* line-height:0.8rem; */
+    color:#b5b5b5;
+    margin-top:0.15rem;
+    margin-left:0.3rem;
+    border-radius: 6px;
+    background:#fff;
+    float:left;
+    .searchIco{
+        display: block;
+        float:left;
+        font-size:60px;
     }
+    .searchFont{
+        display: block;
+        float:left;
+       font-size: 23px;
+       
+    }
+    }
+    
 .content{
-    overflow:hidden;
+    overflow:hidden;margin-top:.1rem;
     flex: 1;
     .left{
         width: 25%;color: #666;float: left;height: 100%;border-right:1px solid #ccc;
@@ -28,7 +47,7 @@ flex-direction:column
         ul li{width: 100%;height: 1rem;line-height: 1rem; margin-left:.15rem;}
         span{display: inline-block;width: 80%;height: .6rem;border-radius:.5rem;
                 text-align: center;line-height: .6rem;}
-        .color{background:#999}
+        .color{background:#333;color:#fff}
             }
         
     .right{width: 75%;float: right;height: 100%;padding:.2rem;

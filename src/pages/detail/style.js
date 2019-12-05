@@ -9,6 +9,7 @@ height: 100%;display: flex;flex-direction: column;background: #fff;position: abs
     }
     span{margin: auto;font-size:35px;line-height: 1rem;}
 }
+.pic{width:750px;height:750px}
 img{width: 100%;height: 100%;}
 .info{width: 100%;height: 3rem;padding: 0.2rem;
     .price{height:1rem;display: flex;align-items: center;font-size:20px;padding: .2rem;color: #c33;border-bottom: 2px solid #999;}

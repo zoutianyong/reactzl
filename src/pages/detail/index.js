@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux"
 import { DetailContener } from "./style"
 import { mapStateToProps, mapDispatchToProps } from "./mapstore"
-import Item from "_antd-mobile@2.3.1@antd-mobile/lib/popover/Item";
+import { withRouter } from "react-router-dom"
+@withRouter
 @connect(mapStateToProps, mapDispatchToProps)
 class Detail extends React.Component {
     constructor() {
@@ -17,7 +18,7 @@ class Detail extends React.Component {
                     <span>商品详情</span><span className="goback"><i className="iconfont">&#xe610;</i></span>
                 </div>
                 <div className="pic">
-                    <img src={detailList.pics} />
+                    <img src={detailList.pics?detailList.pics:'https://pic.cdfgsanya.com/assets/upload/product/ac4e21507bac15cbcf610a1382c39ef9_400x400.jpg'} alt="" />
                 </div>
                 <div className="info">
                     <div className="price">
@@ -33,13 +34,12 @@ class Detail extends React.Component {
                         <i className="iconfont">&#xe613;</i>
                         <p>收藏</p>
                     </span>
-                    <span>
+                    <span onClick={this.jump.bind(this)}>
                         <i className="iconfont">&#xe6d7;</i>
                         <p>购物袋</p>
                     </span>
-                    <div className="add">添加到购物车</div>
-                    <div className="buy" onClick={this.addProduct.bind(this,detailList.pics)}>立即购买</div>
-
+                    <div className="add" onClick={this.addProduct.bind(this, detailList.pics)}>添加到购物车</div>
+                    <div className="buy" >立即购买</div>
                 </div>
             </DetailContener>
         )
@@ -48,28 +48,33 @@ class Detail extends React.Component {
         let mark = this.props.match.params.id
         this.props.getPic(mark)
     }
-    addProduct(img){
-        let name=this.props.match.params.name
-        let price=this.props.match.params.newprice
-        let num=1
-        let imgs=img[0]
-
-       
-        let info={
-            name,price,imgs,num
+    addProduct(img) {
+        let name = this.props.match.params.name
+        let price = this.props.match.params.newprice
+        let num = 1
+        let sign=true
+        let imgs = img[0]
+        let info = {
+            name, price, imgs, num,sign
         }
-        console.log(info)
-        let car=localStorage.getItem("car")?JSON.parse(localStorage.getItem("car")):[]
-       
-        car.push(info)
-            
-        
-        
-        
-        localStorage.setItem("car",JSON.stringify(car))
+        let car = localStorage.getItem("car") ? JSON.parse(localStorage.getItem("car")) : []
+
+        var flag = true;
+        for (let i = 0; i < car.length; i++) {
+            if (car[i].name === info.name) {
+                car[i].num++;
+                flag = false;
+            }
+        }
+        if (flag === true) {
+            car.push(info)
+        }
+        localStorage.setItem("car", JSON.stringify(car))
+    }
+    jump() {
+        this.props.history.push("/order")
     }
 }
-
 export default Detail;
 
 

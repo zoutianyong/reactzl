@@ -1,4 +1,4 @@
-import {listType,HomeType,SearchType,FindType,productLIst,picList} from "./actionType"
+import {listType,HomeType,SearchType,FindType,productLIst,picList,handleChecks} from "./actionType"
 import {createAction} from "redux-actions"
 import {typeApi,listApi,picApi,loginApi,registerApi,HomeApi,SearchApi,FindApi} from "../../api/index"
 
@@ -71,5 +71,12 @@ export const registerAction=(username,password)=>{
     return async(dispatch)=>{
         let data=await registerApi(username,password)
         console.log(data)
+    }
+}
+//////////////////////////购物车
+export const checkAction=()=>{
+    let sumAction=createAction(handleChecks)
+    return (dispatch)=>{     
+    dispatch(sumAction())
     }
 }

@@ -11,13 +11,25 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
      constructor(){
          super()
          this.state={
-             color:0
+             color:0,
+             pic:[
+                "https://pic.cdfgsanya.com/assets/upload/img/45dfcf545905d4581d913c3848e62500.jpg",
+                "https://pic.cdfgsanya.com/assets/upload/img/1ad72d76c95a7475d0e2a0976595edc1.jpg",
+               
+                "https://pic.cdfgsanya.com/assets/upload/img/b8de986e72ddd7b47a6479c2d2226700.jpg",
+                "https://pic.cdfgsanya.com/assets/upload/img/b289fd3ac54f47bc3ec3d1c2e96be013.jpg",
+                "https://pic.cdfgsanya.com/assets/upload/img/8e7e726361464960b35c26cf7e833a89.jpg",
+                "https://pic.cdfgsanya.com/assets/upload/img/54207dc5547ddd54515dbfd1fb3abac5.jpg",
+                "https://pic.cdfgsanya.com/assets/upload/img/54207dc5547ddd54515dbfd1fb3abac5.jpg",
+             ],
+             flag:0
          }
      }
     render() {
         let {color}=this.state
         let {tyofLIst}=this.props;
-    
+        let {pic}=this.state
+        let {flag}=this.state
         return (
             <PageContainer>
                     <TypeConinter >
@@ -25,7 +37,8 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
                     
                     <img alt="" src="https://pic.cdfgsanya.com/assets/upload/img/2e8a31ebeb903855d9b66212a02708f8.png" />
                     <div className="head_input">
-                        <input type="text" />
+                    <span className="iconfont searchIco">&#xe654;</span>
+                        <span className="searchFont">搜索：分类 品牌 系列 商品</span>
                     </div>
                   
                 </div>
@@ -47,7 +60,7 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
                         </ul>
                     </div>
                     <div className="right">
-                        <img alt="" src="https://pic.cdfgsanya.com/assets/upload/img/45dfcf545905d4581d913c3848e62500.jpg"/>
+                        <img alt="" src={pic[flag]}/>
                         <div>
                            
                            {
@@ -88,7 +101,8 @@ import {mapStateToProps,mapDispatchToProps} from "./mapstore"
     }
     handleChange(index){
         this.setState({
-            color:index
+            color:index,
+            flag:index
         })
     }
     handleClick(child){
