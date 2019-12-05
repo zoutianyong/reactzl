@@ -61,3 +61,11 @@ export const  registerApi=(username,password)=>http.post({
         password
     }
 })
+
+export const xiugaiImgApi=(filesImg,id)=>http.post({
+    url:"/users/modifyUserPic",
+    data:{
+        filesImg,
+        id
+    }
+})

@@ -8,6 +8,7 @@ import {
     Detail,
     Search,
     List,
+    Message
 } from "pages"
 // import Detail from "../pages/detail";
 
@@ -81,6 +82,11 @@ export const NoTabBarRoute = [
     {
         path:"/list",
         component:List,
+        meta:{}
+    },
+    {
+        path:"/message",
+        component:Message,
         meta:{}
     }
 ];

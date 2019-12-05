@@ -13,7 +13,7 @@ class List extends Component {
 
             <ListContiner>
                 <div className="head">
-                    <span>商品列表</span><span className="goback"><i className="iconfont">&#xe610;</i></span>
+                    <span>商品列表</span><span className="goback"><i className="iconfont" onClick={this.handleClickBack.bind(this)}>&#xe610;</i></span>
                 </div>
                 <div className="main">
 
@@ -37,7 +37,9 @@ class List extends Component {
     handleClick(item) {
         this.props.history.push("/detail/" + item.id + "/" + item.salesPrice.value + "/" + item.name + "/" + item.pic)
     }
-
+    handleClickBack(){
+        this.props.history.go(-1);
+    }
     componentDidMount() {
         this.props.handleList()
     }

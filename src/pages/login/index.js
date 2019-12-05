@@ -62,6 +62,8 @@ import { withRouter } from "react-router-dom";
         //  
 
         setTimeout(()=>{
+           
+            
             this.props.history.push("/mine")
         },300)
        

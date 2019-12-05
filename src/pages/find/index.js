@@ -93,7 +93,7 @@ class Find extends Component {
                                 <div className="nameTitle"><span key={Math.random()}>{item.index}</span></div>
                                 {
                                     item.list.map((child)=>(
-                                    <div className="titleList" key={child.name}><span>{child.name}</span></div>
+                                    <div className="titleList" onClick={this.handleClickTo.bind(this)} key={child.name}><span>{child.name}</span></div>
                                     ))
                                 }
                                
@@ -124,6 +124,10 @@ class Find extends Component {
             //console.log(index);
            document.body.scrollTop=document.getElementById(item.index).offsetTop-100;
             //console.log(document.getElementById(item.index).offsetTop)
+        }
+        handleClickTo(){
+            //console.log(11);
+            this.props.history.push("/list")
         }
     componentDidMount(){
         this.props.handleAsyncFind();

@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux"
 import { DetailContener } from "./style"
 import { mapStateToProps, mapDispatchToProps } from "./mapstore"
-import Item from "_antd-mobile@2.3.1@antd-mobile/lib/popover/Item";
+import {withRouter} from "react-router-dom"
+@withRouter
 @connect(mapStateToProps, mapDispatchToProps)
 class Detail extends React.Component {
     constructor() {
@@ -14,7 +15,7 @@ class Detail extends React.Component {
         return (
             <DetailContener className="detail">
                 <div className="head">
-                    <span>商品详情</span><span className="goback"><i className="iconfont">&#xe610;</i></span>
+                    <span>商品详情</span><span className="goback" onClick={this.handleBack.bind(this)}><i className="iconfont">&#xe610;</i></span>
                 </div>
                 <div className="pic">
                     <img src={detailList.pics} />
@@ -67,6 +68,9 @@ class Detail extends React.Component {
         
         
         localStorage.setItem("car",JSON.stringify(car))
+    }
+    handleBack(){
+        this.props.history.go(-1);
     }
 }
 

@@ -14,5 +14,4 @@ export const mapDispatchToProps=(dispatch)=>({
 
      
 })
-
-// //////////////register///////////////login                        
+                      

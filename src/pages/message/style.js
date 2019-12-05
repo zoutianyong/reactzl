@@ -1,0 +1,140 @@
+import styled from "styled-components"
+export const MessageCenter=styled.div`
+width:100%;
+height:108%;
+background:#f8f8f8;
+.header{
+    width:100%;
+    height:1rem;
+    background:#fff;
+    padding:0 10px;
+    .headerLeft{
+        float:left;
+        width:60px;
+        height:100%;
+        line-height:1rem;
+        text-align:center;
+        span{
+            font-size:35px;
+        }
+    }
+    .headerCenter{
+        float:left;
+        width:80%;
+        line-height:1rem;
+        text-align:center;
+        font-size:30px;
+    }
+}
+.message{
+    width:100%;
+    height:4.5rem;
+    background:#fff;
+    margin-top:40px;
+    padding:0 25px;
+    .tx{
+        width:100%;
+        height:1.5rem;
+        border-bottom:1px solid #ccc;
+        padding:0 15px;
+        position: relative;
+        input{
+            position:absolute;
+            top:0.7rem;
+            right:-1rem;
+            z-index:1;
+        }
+        .txLeft{
+            width:100px;
+            line-height:1.5rem;
+            font-size:25px;
+            float:left;
+        }
+        .textRight{
+            position:absolute;
+            top:0;
+            right:15px;
+            width:150px;
+            line-height:1.5rem;
+            text-align:right;
+            span{
+                display:block;
+                float:right;
+                font-size:25px;
+            }
+            .txImg{
+                width:1.2rem;
+                height:1.2rem;
+                margin-top:0.15rem;
+                border-radius:50%;
+                overflow:hidden;
+                /* background:red; */
+                float:left;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+    .nc{
+        width:100%;
+        height:1.5rem;
+        border-bottom:1px solid #ccc;
+        padding:0 15px;
+        position: relative;
+        .ncLeft{
+            width:100px;
+            line-height:1.5rem;
+            font-size:25px;
+            float:left;
+        }
+        .ncRight{
+            position:absolute;
+            top:0;
+            right:15px;
+            line-height:1.5rem;
+            width:240px;
+            text-align:right;
+            .span{
+                font-size:25px;
+                margin-left:10px;
+            }    
+        }
+    }
+    .zh{
+        width:100%;
+        height:1.5rem;
+        padding:0 15px;
+        position: relative;
+        .zhLeft{
+            width:100px;
+            line-height:1.5rem;
+            font-size:25px;
+            float:left;
+        }
+        .zhRight{
+            position:absolute;
+            top:0;
+            right:15px;
+            line-height:1.5rem;
+            width:40px;
+            text-align:center;
+            span{
+                font-size:25px;
+            }            
+        }
+    }
+}
+.back{
+    width:90%;
+    line-height:0.9rem;
+    text-align:center;
+    font-size:30px;
+    border-radius:15px;
+    margin-left:5%;
+    margin-top:30px;
+    background:#c55;
+    color:#fff;
+}
+`

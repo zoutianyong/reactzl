@@ -54,3 +54,8 @@ export const List =Loadable({
     loader:_=>import("./list"),
     loading:Loading
 })
+
+export const Message=Loadable({
+    loader:_=>import("./message"),
+    loading:Loading
+})
